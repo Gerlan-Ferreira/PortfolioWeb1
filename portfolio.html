@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gerlan Ferreira | Portfolio web</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body id="topo">
+
+    <nav class="navbar navbar-default navbar-expand-lg fixed-top text-uppercase" id="menu">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger hvr-wobble-to-bottom-right" href="#topo">Gerlan</a>
+            <div class="collapse navbar-collapse" id="responsivo">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link hvr-grow-rotate" href="#portfolio">Portifolio web</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#sobre" class="nav-link hvr-grow-rotate">Sobre</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#contato" class="nav-link hvr-grow-rotate">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-default text-white text-center">
+        <div class="container">
+            <h1 class="text-uppercase mb-0">Gerlan</h1>
+            <h2 class="font-weight-light mb-0">Desenvolvedor Web</h2>
+        </div>
+    </header>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="text-center text-uppercase text-secondary">Portfolio web </h2>
+            
+
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="portfolio-item">
+                        <a target="_blank" href="https://www.instagram.com/gerlan_barros19/">
+                            <img onmouseover="Img_grande(this)" onmouseout="normalImg(this)" src="imgs/logo_instagram.jpg" alt="Instagram">
+                        </a>
+                        
+                        <p class="mb-1">Instagram é uma rede social online de compartilhamento de fotos e vídeos entre seus usuários.</p>
+                        <a target="_blank" href="https://www.instagram.com/?hl=pt-br">Saiba mais...</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="portfolio-item">
+                        <a target="_blank" href="https://www.github.com/gerlan-ferreira">
+                            <img onmouseover="Img_grande(this)" onmouseout="normalImg2(this)" src="imgs/logo_github.png" alt="Github" >
+                        </a>
+                        
+                        <p class="mb-1">GitHub é uma plataforma de hospedagem de código-fonte com controle de versão usando o Git</p>
+                        <a target="_blank" href="https://www.github.com">Saiba mais...</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="portfolio-item">
+                        <a target="_blank" href="https://www.linkedin.com/in/gerlan-barros-2935a3120">
+                            <img onmouseover="Img_grande(this)" onmouseout="normalImg(this)" src="imgs/logo_linkedin.png" alt="Linkedin">
+                        </a>
+                        
+                        <p class="mb-1">LinkedIn é uma rede de negócios que permite a criaçao de perfis online, voltado para aspectos profissionais.</p>
+                        <a target="_blank" href="https://www.linkedin.com/">Saiba mais...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-default text-white text-center mb-0 about" id="sobre">
+        <div class="container">
+            <h2 class="text-uppercase">Sobre</h2>
+
+            <div class="row">
+                <p class="lead">
+                    Meu nome é Gerlan Ferreira de Barros, tenho 21 anos. Sou da cidade de Jucás interior do Ceará, resido em João Pessoa-PB há 3 anos, que é justamente o período que trabalho com TI. Atualmente trabalho na MVarandas Tecnologia, como analista e supervisor da equipe de Service Desk. Realizando análises, manutenções nos softwares instalados nos clientes e gerenciando as demandas da equipe de Service Desk.  
+                </p>
+            </div>
+
+            <div class="row social-medias">
+
+                <a target="_blank" href="https://www.instagram.com/gerlan_barros19" class="social-media">
+                    <i class="fa fa-instagram large-icon"></i>
+                </a>
+                
+                <a target="_blank" href="https://www.github.com/gerlan-ferreira" class="social-media">
+                    <i class="fa fa-github large-icon"></i>
+                </a>
+
+                <a target="_blank" href="https://www.linkedin.com/in/gerlan-barros-2935a3120" class="social-media">
+                    <i class="fa fa-linkedin large-icon"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contato">
+        <div class="container">
+            <h2 class="text-center text-uppercase text-secondary">Contato</h2>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <form name="contactForm" class="contactForm" id="Formcontato">
+                        <div class="form-group">
+                            <input class="form-control" onblur="Form_foco(this)" id="nome" type="text" placeholder="Seu nome" required="required">
+                        </div>
+
+                        <div class="form-group">
+                            <span id="msg_email"></span>
+                            <input class="form-control" type="text" id="email" onblur="validacaoEmail(this)" placeholder="Seu endereço de E-mail" />
+                            
+                        </div>
+                        
+
+                        <div class="form-group">
+                            <input class="form-control number" onblur="Form_foco(this)" maxlength="13" type="text" id="numero" placeholder="Seu número" required="required">
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control" onblur="Form_foco(this)" type="text" id="assunto" placeholder="Assunto do contato" required="required">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" onblur="Form_foco(this)"  id="mensagem" rows="5" placeholder="Mensagem de contato." required="required"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-send hvr-buzz">Enviar</button>
+                            <button type="reset" class="btn btn-send hvr-buzz" id="btn_limpar">Limpar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-center text-white footer-port">
+        <div class="container">
+            <h4 class="mx-auto text-uppercase">Mapa do Site</h4>
+
+            <div class="row">
+                <ul>
+                    <li><a href="#portfolio">Portfolio web</a></li> |
+                    <li><a href="#sobre">Sobre</a></li> |
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright text-center">
+        <div class="container">
+            <small>Copyright &copy; <a target="_blank" href="https://github.com/Gerlan-Ferreira/PortfolioWeb1.git">Gerlan</a>, 2019.</small>
+        </div>
+    </div>
+
+    <script src="js/functions.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
